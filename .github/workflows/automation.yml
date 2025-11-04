@@ -28,7 +28,7 @@ jobs:
       - name: Build & Push GameHub App Image
         uses: docker/build-push-action@v4
         with:
-          context: ./microservice-arch/app
+          context: ./microservice-arch/gamehub-microarch/app
           file: ./microservice-arch/gamehub-microarch/app/Dockerfile
           push: true
           tags: |
@@ -37,7 +37,7 @@ jobs:
       - name: Build & Push Snake Image
         uses: docker/build-push-action@v4
         with:
-          context: ./microservice-arch/snake
+          context: ./microservice-arch/gamehub-microarch/SnakeGame
           file: ./microservice-arch/gamehub-microarch/SnakeGame/Dockerfile
           push: true
           tags: |
@@ -46,7 +46,7 @@ jobs:
       - name: Build & Push 2048 Image
         uses: docker/build-push-action@v4
         with:
-          context: ./microservice-arch/2048
+          context: ./microservice-arch/gamehub-microarch/TwentyFortyEight
           file: ./microservice-arch/gamehub-microarch/TwentyFortyEight/Dockerfile
           push: true
           tags: |
